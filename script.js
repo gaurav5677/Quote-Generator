@@ -5,7 +5,7 @@ const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
-
+const loader = document.getElementById("loader");
 // Quotes form API
 
 async function getQuote() {
@@ -25,7 +25,7 @@ async function getQuote() {
       authorText.innerText = data.quoteAuthor;
     }
     // this data will not be set until it finishes  returning const response in jspon format
-    if (data.quoteText.lenght > 50) {
+    if (data.quoteText.lenght > 120) {
       quoteText.classList.add("long-quote");
     } else {
       quoteText.classList.remove("long-quote");
